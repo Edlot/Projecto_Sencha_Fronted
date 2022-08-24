@@ -9,7 +9,7 @@ Ext.define('MiAppSencha.view.ListadoBase',{
         Ext.apply(this,{
             tbar:[
                 {
-                    text: 'Agregar'+this.leyenda,
+                    text: 'Agregar '+this.leyenda,
                     iconCls: "x-fa fa-plus",
                     handler: 'mostrarFormulario'
                 }

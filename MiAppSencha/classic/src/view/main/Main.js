@@ -33,11 +33,11 @@ Ext.define('MiAppSencha.view.main.Main', {
         },
         title: {
             bind: {
-                text: '{name}'
+                text: 'Proyecto Sencha'
             },
             flex: 0
         },
-        iconCls: 'fa-th-list'
+        iconCls: 'fa-desktop'
     },
 
     tabBar: {
@@ -91,11 +91,9 @@ Ext.define('MiAppSencha.view.main.Main', {
             xtype: 'usuarios'
         },
         {
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }]
+            title: 'Telefonos',
+            iconCls: 'fa-phone',
+            xtype: 'telefono'
+        },
+        ]
 });
