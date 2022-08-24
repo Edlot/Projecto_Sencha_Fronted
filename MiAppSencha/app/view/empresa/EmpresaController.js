@@ -22,8 +22,8 @@ Ext.define('MiAppSencha.view.empresa.EmpresaController',{
                     success: function(response,opts){
                         console.log(datos);
                         Ext.Msg.alert('ok','Empresa creada correctamente', function(){
-                            this.close();
-                        },this)
+                            vista.close();
+                        })
                     },
                     failure: function(response,opts){
                         console.log('El servido fallo con el codigo ' + response.status);
