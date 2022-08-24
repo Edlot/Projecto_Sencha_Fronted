@@ -15,27 +15,36 @@ Ext.define('MiAppSencha.view.telefono.Telefono',{
             {text: 'Tipo', dataIndex: 'tipo', align: 'center', flex: 1},
             {text: 'Pais', dataIndex: 'pais', align: 'center', flex: 1},
             {text: 'Numero', dataIndex: 'numero', align: 'center', flex: 1},
-            {
-                text: "Acciones",
-                align: "center",
-                xtype: "actioncolumn",
+        ],
+        listeners: {
+            itemcontextmenu: function(grid,record,item,Index, e){
+                var contextMenu = Ext.create('Ext.menu.Menu',{
+                    controller: 'telefono',
+                    items: 
+                    [
+                        {
+                            text: 'Editar',
+                            itemId: 'editar',
+                            iconCls: 'x-fa fa-edit',
+                            handler: function(){
+                                this.fireEvent("editar",grid, Index)
+                            }
+                        },
+                        {
+                            text: 'Eliminar',
+                            itemId: 'eliminar',
+                            iconCls: 'x-fa fa-trash',
+                            handler: function(){
+                                this.fireEvent("eliminar",grid, Index)
+                            }
+                        }
+                    ]
 
-                items: [{
-                    iconCls: 'x-fa fa-edit',
-                    tooltip: 'Editar',
-                    handler: function(grid, rowIndex){
-                        this.fireEvent("editar",grid, rowIndex)
-                    }
-                },'->',
-                {
-                    iconCls: 'x-fa fa-trash',
-                    tooltip: 'Eliminar',
-                    handler: function(grid, rowIndex){
-                        this.fireEvent("eliminar",grid, rowIndex)
-                    }
-                }]
+                });
+                contextMenu.showAt(e.getXY());
+                e.stopEvent();
             }
-        ]
+        }
         
     }
 })

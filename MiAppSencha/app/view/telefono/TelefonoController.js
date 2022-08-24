@@ -90,8 +90,11 @@ Ext.define('MiAppSencha.view.telefono.TelefonoControllers',{
     },
 
     control: {
-        actioncolumn: {
+        '#editar': {
             editar: "onEditar",
+            
+        },
+        '#eliminar': {
             eliminar: "onEliminar"
         }
     }

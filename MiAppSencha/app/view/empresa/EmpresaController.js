@@ -105,9 +105,12 @@ Ext.define('MiAppSencha.view.empresa.EmpresaController',{
     },
 
     control: {
-        actioncolumn: {
-            editar: 'onEditar',
-            eliminar: 'onEliminar'
+        '#editar': {
+            editar: "onEditar",
+            
+        },
+        '#eliminar': {
+            eliminar: "onEliminar"
         }
     }
 })

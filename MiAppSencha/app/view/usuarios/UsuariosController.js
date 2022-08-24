@@ -90,8 +90,11 @@ Ext.define('MiAppSencha.view.usuarios.UsuariosController',{
     },
 
     control: {
-        actioncolumn: {
+        '#editar': {
             editar: "onEditar",
+            
+        },
+        '#eliminar': {
             eliminar: "onEliminar"
         }
     }

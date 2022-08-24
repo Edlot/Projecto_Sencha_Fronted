@@ -15,28 +15,37 @@ Ext.define('MiAppSencha.view.empleado.Empleado',{
             {text: 'Nombre', dataIndex: 'nombre', align: 'center', flex: 1},
             {text: 'Apellido', dataIndex: 'apellido', align: 'center', flex: 1},
             {text: 'Email', dataIndex: 'email', align: 'center', flex: 2},
-            {text: 'Direccion', dataIndex: 'direccion', align: 'center', flex: 1},
-            {
-                text: "Acciones",
-                align: "center",
-                xtype: "actioncolumn",
+            {text: 'Direccion', dataIndex: 'direccion', align: 'center', flex: 1},  
+        ],
+        listeners: {
+            itemcontextmenu: function(grid,record,item,Index, e){
+                var contextMenu = Ext.create('Ext.menu.Menu',{
+                    controller: 'empleado',
+                    items: 
+                    [
+                        {
+                            text: 'Editar',
+                            itemId: 'editar',
+                            iconCls: 'x-fa fa-edit',
+                            handler: function(){
+                                this.fireEvent("editar",grid, Index)
+                            }
+                        },
+                        {
+                            text: 'Eliminar',
+                            itemId: 'eliminar',
+                            iconCls: 'x-fa fa-trash',
+                            handler: function(){
+                                this.fireEvent("eliminar",grid, Index)
+                            }
+                        }
+                    ]
 
-                items: [{
-                    iconCls: 'x-fa fa-edit',
-                    tooltip: 'Editar',
-                    handler: function(grid, rowIndex){
-                        this.fireEvent("editar",grid, rowIndex)
-                    }
-                },'->',
-                {
-                    iconCls: 'x-fa fa-trash',
-                    tooltip: 'Eliminar',
-                    handler: function(grid, rowIndex){
-                        this.fireEvent("eliminar",grid, rowIndex)
-                    }
-                }]
+                });
+                contextMenu.showAt(e.getXY());
+                e.stopEvent();
             }
-        ]
+        }
         
     }
 })
