@@ -45,9 +45,7 @@ Ext.define('MiAppSencha.view.telefono.VentanaTelefono',{
                 {
                     fieldLabel: 'Numero',
                     name: 'numero',
-                    itemId: 'numero',
-                    placeholder: 'xxxxxxxx',
-                    inputMask: '99999999'
+                    itemId: 'numero'
                 },
                 {
                     xtype: 'comboempleado',
