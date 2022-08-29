@@ -1,9 +1,9 @@
 Ext.define('MiAppSencha.view.usuario.Usuario',{
     extend: 'Ext.window.Window',
-
-     controller: 'usuarioctr',
-
+    controller: 'usuarioctr',
     title: 'Login',
+    scrollable: true,
+
             height: 200,
             width: 300,
 
@@ -13,16 +13,19 @@ Ext.define('MiAppSencha.view.usuario.Usuario',{
             modal: true,
 
             buttonAlign: 'center',
+
+            
             items: [
                 {
                     xtype: 'form',
-                    bodypadding: 10,
+                    bodyPadding: 10,
 
                     reference: 'formulario',
 
                     defaults:{
                         xtype: 'textfield',
                         allowBlank: false,
+                       
                     },
 
                     items:[
@@ -43,7 +46,7 @@ Ext.define('MiAppSencha.view.usuario.Usuario',{
             buttons: [
                 {
                     text: 'Ingresar',
-                    iconCls: 'x-fa fa-user-ninja',
+                    iconCls: 'x-fa fa-user-check',
                     handler: 'hacerLogin'
                 }
             ]

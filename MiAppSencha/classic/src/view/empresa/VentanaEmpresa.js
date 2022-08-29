@@ -5,7 +5,7 @@ Ext.define('MiAppSencha.view.empresa.VentanaEmpresa',{
     title: 'Agregar Empresa',
     
 
-   
+    scrollable: true,
 
     layout:{
         type: 'vbox',

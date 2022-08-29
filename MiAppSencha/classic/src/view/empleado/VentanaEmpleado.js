@@ -3,6 +3,8 @@ Ext.define('MiAppSencha.view.empleado.VentanaEmpleado',{
     title: 'Agregar Empleado',
     controller: 'empleado',
 
+    scrollable: true,
+    
     items:[
         {
             xtype: 'form',
@@ -38,7 +40,8 @@ Ext.define('MiAppSencha.view.empleado.VentanaEmpleado',{
                 {
                     fieldLabel: 'Email',
                     name: 'email',
-                    itemId: 'email'
+                    itemId: 'email',
+                    vtype: 'email'
                 },
                 {
                     fieldLabel: 'Direccion',

@@ -1,13 +1,13 @@
 /** @class Ext.panel.Panel */
 //
-
+$panel-base-color: #B38867;
 $panel-header-color: dynamic(#fff);
 $panel-header-text-transform: dynamic(none);
 $panel-header-line-height: dynamic(16px);
 $panel-header-font-weight: dynamic($font-weight-bold);
 $panel-header-padding: dynamic(9px 9px 10px);
 $panel-border-width: dynamic(1px);
-$panel-body-border-color: dynamic($neutral-medium-dark-color);
+$panel-body-border-color: dynamic(#000);
 $panel-header-border-width: dynamic(1px);
 $panel-body-border-width: dynamic(1px);
 $panel-frame-border-width: dynamic(5px);

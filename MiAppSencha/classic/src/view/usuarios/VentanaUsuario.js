@@ -5,12 +5,15 @@ Ext.define('MiAppSencha.view.usuarios.VentanaUsuario',{
     title: 'Agregar Usuario',
     
 
-   
+    scrollable: true,
 
     layout:{
         type: 'vbox',
         align: 'middle'
     },
+
+    height: 200,
+    width: 400,
 
     items:[
         {
@@ -39,12 +42,14 @@ Ext.define('MiAppSencha.view.usuarios.VentanaUsuario',{
                 {
                     fieldLabel: 'Email',
                     name: 'email',
-                    itemId: 'email'
+                    itemId: 'email',
+                    vtype: 'email'
                 },
                 {
                     fieldLabel: 'Contraseña',
                     name: 'password',
-                    itemId: 'password'
+                    itemId: 'password',
+                    inputType: 'password'
                 },
             ]
         }

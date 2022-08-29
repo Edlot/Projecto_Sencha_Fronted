@@ -3,6 +3,7 @@ Ext.define('MiAppSencha.view.telefono.VentanaTelefono',{
    
     controller: 'telefono',
     title: 'Agregar Telefono',
+    scrollable: true,
 
     layout:{
         type: 'vbox',
@@ -44,7 +45,9 @@ Ext.define('MiAppSencha.view.telefono.VentanaTelefono',{
                 {
                     fieldLabel: 'Numero',
                     name: 'numero',
-                    itemId: 'numero'
+                    itemId: 'numero',
+                    placeholder: 'xxxxxxxx',
+                    inputMask: '99999999'
                 },
                 {
                     xtype: 'comboempleado',
